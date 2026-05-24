@@ -508,6 +508,54 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ------------------------------------------------------------------ */
+/* Terms / Privacy prose pages                                         */
+/* ------------------------------------------------------------------ */
+
+.prose-page {
+    padding: 4rem 2rem 6rem;
+}
+
+.prose-inner {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.prose-header {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.prose-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+}
+
+.prose-meta {
+    font-size: 0.85rem;
+    color: var(--ink-faint);
+}
+
+.prose-section {
+    margin-bottom: 2.25rem;
+}
+
+.prose-section h3 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    color: var(--ink);
+    margin-bottom: 0.6rem;
+}
+
+.prose-section p {
+    font-size: 0.975rem;
+    color: var(--ink-muted);
+    line-height: 1.8;
+}
+
+/* ------------------------------------------------------------------ */
 /* Responsive                                                          */
 /* ------------------------------------------------------------------ */
 
