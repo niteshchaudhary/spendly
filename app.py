@@ -1,6 +1,20 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, g
+from database.db import get_db, init_db, seed_db
 
 app = Flask(__name__)
+
+# Initialize the database
+def init_app():
+    with app.app_context():
+        init_db()
+        seed_db()
+
+# Close database connection after each request
+@app.teardown_appcontext
+def close_db(error):
+    db = getattr(g, '_database', None)
+    if db is not None:
+        db.close()
 
 
 # ------------------------------------------------------------------ #
@@ -62,4 +76,5 @@ def delete_expense(id):
 
 
 if __name__ == "__main__":
+    init_app()
     app.run(debug=True, port=5001)
